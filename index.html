@@ -2,918 +2,161 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="description" content="ElliNails - Estudio profesional de uñas. Acrílicas, semipermanente, diseños personalizados y más. Reserva tu cita por WhatsApp.">
-    <meta name="keywords" content="uñas, acrílicas, semipermanente, diseño de uñas, manicura, pedicura">
-    <meta name="author" content="ElliNails">
-    <title>ElliNails | Estudio Profesional de Uñas</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome 6 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ElliNails, estudio de belleza en Cartagena especializado en manicure, uñas acrílicas y diseños personalizados.">
+    <meta name="theme-color" content="#f6f1ed">
+    <title>ElliNails | Beauty studio en Cartagena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- AOS Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --color-primary: #2c1810;
-            --color-secondary: #5c3d2e;
-            --color-accent: #d4a373;
-            --color-accent-light: #fae5d3;
-            --color-gold: #c9a03d;
-            --color-white: #ffffff;
-            --color-black: #1a1a1a;
-            --color-gray: #6c757d;
-            --color-light: #f8f9fa;
-            --shadow-sm: 0 5px 20px rgba(0,0,0,0.08);
-            --shadow-md: 0 10px 30px rgba(0,0,0,0.12);
-            --shadow-lg: 0 20px 40px rgba(0,0,0,0.15);
-            --transition: all 0.3s ease;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: var(--color-light);
-            color: var(--color-primary);
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4, .logo {
-            font-family: 'Playfair Display', serif;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* ========== HEADER ========== */
-        .header {
-            background: var(--color-white);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-        }
-
-        .header.scrolled {
-            padding: 10px 0;
-            background: rgba(255,255,255,0.98);
-        }
-
-        .header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 24px;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: var(--color-gold);
-        }
-
-        .nav-menu ul {
-            display: flex;
-            gap: 35px;
-            list-style: none;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--color-primary);
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .nav-menu a:hover {
-            color: var(--color-gold);
-        }
-
-        .btn-whatsapp-nav {
-            background: #25D366;
-            color: white !important;
-            padding: 10px 20px;
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-whatsapp-nav:hover {
-            background: #128C7E;
-            transform: scale(1.05);
-        }
-
-        .menu-toggle {
-            display: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: var(--color-primary);
-        }
-
-        /* ========== HERO SECTION ========== */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #fae5d3 0%, #ffe8dc 100%);
-            display: flex;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            width: 100%;
-            padding: 120px 20px 80px;
-        }
-
-        .hero-subtitle {
-            color: var(--color-gold);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            color: var(--color-primary);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 30px;
-            color: var(--color-secondary);
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: var(--color-primary);
-            color: var(--color-white);
-            border: 2px solid var(--color-primary);
-        }
-
-        .btn-primary:hover {
-            background: transparent;
-            color: var(--color-primary);
-            transform: translateY(-3px);
-        }
-
-        .btn-whatsapp {
-            background: #25D366;
-            color: white;
-            border: 2px solid #25D366;
-        }
-
-        .btn-whatsapp:hover {
-            background: #128C7E;
-            transform: translateY(-3px);
-        }
-
-        /* ========== SECCIONES ========== */
-        .section {
-            padding: 100px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .section-header p {
-            color: var(--color-gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .section-header span {
-            color: var(--color-gold);
-        }
-
-        /* ========== SERVICIOS ========== */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 35px;
-        }
-
-        .service-card {
-            background: var(--color-white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            text-align: center;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .service-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--color-gold);
-            margin: 20px 0 10px;
-        }
-
-        .service-info {
-            padding: 0 25px 30px;
-        }
-
-        .service-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 12px;
-        }
-
-        .service-info p {
-            color: var(--color-gray);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .service-price {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--color-gold);
-            margin-bottom: 15px;
-        }
-
-        .btn-service {
-            background: var(--color-accent-light);
-            color: var(--color-primary);
-            padding: 10px 25px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: var(--transition);
-        }
-
-        .btn-service:hover {
-            background: var(--color-gold);
-            color: white;
-        }
-
-        /* ========== GALERÍA ========== */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            padding: 20px;
-            color: white;
-            transform: translateY(100%);
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            transform: translateY(0);
-        }
-
-        /* ========== TESTIMONIOS ========== */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background: var(--color-white);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: var(--shadow-sm);
-            text-align: center;
-        }
-
-        .stars {
-            color: #ffc107;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            line-height: 1.6;
-            color: var(--color-gray);
-        }
-
-        .testimonial-author {
-            font-weight: 700;
-            color: var(--color-primary);
-        }
-
-        /* ========== CONTACTO ========== */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            background: var(--color-white);
-            border-radius: 30px;
-            padding: 50px;
-            box-shadow: var(--shadow-md);
-        }
-
-        .contact-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .contact-info p {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--color-gray);
-        }
-
-        .contact-info i {
-            width: 30px;
-            color: var(--color-gold);
-            font-size: 1.2rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .social-links a {
-            width: 45px;
-            height: 45px;
-            background: var(--color-accent-light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-primary);
-            font-size: 1.3rem;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background: var(--color-gold);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            font-family: inherit;
-        }
-
-        .contact-form textarea {
-            resize: none;
-            height: 120px;
-        }
-
-        .btn-submit {
-            background: var(--color-primary);
-            color: white;
-            border: none;
-            padding: 15px;
-            border-radius: 10px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .btn-submit:hover {
-            background: var(--color-gold);
-        }
-
-        /* ========== FOOTER ========== */
-        .footer {
-            background: var(--color-primary);
-            color: var(--color-white);
-            padding: 50px 0 20px;
-            margin-top: 50px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-about h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        .footer-about span {
-            color: var(--color-gold);
-        }
-
-        .footer-links h4, .footer-hours h4 {
-            margin-bottom: 20px;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--color-gold);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* ========== RESPONSIVE ========== */
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-            
-            .nav-menu {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 80%;
-                height: 100vh;
-                background: var(--color-white);
-                padding: 40px;
-                transition: var(--transition);
-                box-shadow: var(--shadow-md);
-            }
-            
-            .nav-menu.active {
-                left: 0;
-            }
-            
-            .nav-menu ul {
-                flex-direction: column;
-                gap: 25px;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .section-header h2 {
-                font-size: 2rem;
-            }
-            
-            .contact-grid {
-                padding: 30px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 250px;
-                justify-content: center;
-            }
-        }
-
-        /* ========== ANIMACIONES ========== */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--color-accent-light);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--color-gold);
-            border-radius: 10px;
+        :root { --ink:#292522; --muted:#756b65; --paper:#f8f5f2; --cream:#eee5de; --rose:#d58d86; --rose-dark:#ad6864; --line:rgba(41,37,34,.14); --white:#fffdfb; --shadow:0 18px 55px rgba(65,42,30,.11); }
+        * { box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body { margin:0; background:var(--paper); color:var(--ink); font-family:'DM Sans',sans-serif; }
+        body.menu-open { overflow:hidden; }
+        a { color:inherit; text-decoration:none; }
+        button,input,textarea { font:inherit; }
+        .wrap { width:min(1160px,calc(100% - 48px)); margin:0 auto; }
+        .serif { font-family:'Playfair Display',serif; }
+        .header { position:fixed; inset:0 0 auto; z-index:10; border-bottom:1px solid transparent; transition:.3s ease; }
+        .header.scrolled { background:rgba(248,245,242,.94); border-color:var(--line); backdrop-filter:blur(16px); }
+        .nav { height:82px; display:flex; align-items:center; justify-content:space-between; }
+        .brand { font:600 1.65rem 'Playfair Display',serif; letter-spacing:-.04em; }
+        .brand span { color:var(--rose-dark); font-style:italic; }
+        .nav-links { display:flex; align-items:center; gap:32px; color:var(--muted); font-size:.85rem; }
+        .nav-links a { transition:color .2s ease; }
+        .nav-links a:hover { color:var(--rose-dark); }
+        .nav-cta,.button { display:inline-flex; align-items:center; justify-content:center; gap:9px; border:0; border-radius:2px; cursor:pointer; font-weight:600; transition:transform .2s ease,background .2s ease; }
+        .nav-cta { padding:12px 18px; background:var(--ink); color:var(--white); font-size:.82rem; }
+        .nav-cta:hover,.button:hover { transform:translateY(-2px); }
+        .menu-toggle { display:none; border:0; background:none; color:var(--ink); font-size:1.25rem; cursor:pointer; }
+        .hero { min-height:760px; padding:150px 0 85px; display:grid; align-items:center; position:relative; overflow:hidden; }
+        .hero::before { content:''; position:absolute; width:48vw; height:48vw; max-width:680px; max-height:680px; right:-15vw; top:80px; border-radius:50%; background:var(--cream); }
+        .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; position:relative; }
+        .eyebrow { display:flex; align-items:center; gap:12px; color:var(--rose-dark); font-size:.72rem; font-weight:700; letter-spacing:.17em; text-transform:uppercase; }
+        .eyebrow::before { content:''; width:35px; height:1px; background:var(--rose); }
+        h1 { max-width:650px; margin:22px 0; font:500 clamp(3.4rem,7vw,6.4rem)/.98 'Playfair Display',serif; letter-spacing:-.065em; }
+        h1 em { color:var(--rose-dark); font-weight:500; }
+        .hero-copy { max-width:425px; margin:0 0 32px; color:var(--muted); font-size:1.05rem; line-height:1.75; }
+        .button { padding:15px 22px; background:var(--ink); color:var(--white); }
+        .button-light { background:transparent; color:var(--ink); border:1px solid var(--line); }
+        .button-light:hover { background:var(--white); }
+        .hero-actions { display:flex; flex-wrap:wrap; gap:12px; }
+        .hero-visual { position:relative; min-height:510px; }
+        .hero-image { width:min(100%,405px); height:510px; margin-left:auto; object-fit:cover; object-position:center; border-radius:210px 210px 5px 5px; box-shadow:var(--shadow); }
+        .hero-note { position:absolute; left:0; bottom:35px; width:185px; padding:22px; background:var(--white); box-shadow:var(--shadow); }
+        .hero-note strong { display:block; margin-bottom:6px; font:1.7rem 'Playfair Display',serif; }
+        .hero-note span { color:var(--muted); font-size:.72rem; line-height:1.5; }
+        .trust { padding:24px 0; border-block:1px solid var(--line); }
+        .trust-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; text-align:center; }
+        .trust-item { color:var(--muted); font-size:.8rem; }
+        .trust-item strong { display:block; margin-bottom:4px; color:var(--ink); font:1.15rem 'Playfair Display',serif; }
+        .section { padding:125px 0; }
+        .section-heading { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:45px; }
+        .section-heading h2 { max-width:570px; margin:10px 0 0; font:500 clamp(2.4rem,4vw,4rem)/1.05 'Playfair Display',serif; letter-spacing:-.05em; }
+        .section-heading p { max-width:300px; margin:0; color:var(--muted); line-height:1.6; font-size:.92rem; }
+        .services { background:var(--white); }
+        .service-grid { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); }
+        .service { padding:29px 24px 30px 0; border-bottom:1px solid var(--line); }
+        .service:not(:nth-child(3n+1)) { padding-left:24px; border-left:1px solid var(--line); }
+        .service:nth-child(-n+3) { border-bottom:0; }
+        .service-number { color:var(--rose-dark); font-size:.72rem; font-weight:700; letter-spacing:.1em; }
+        .service h3 { margin:25px 0 10px; font:1.45rem 'Playfair Display',serif; }
+        .service p { min-height:48px; margin:0 0 23px; color:var(--muted); font-size:.86rem; line-height:1.6; }
+        .service-footer { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+        .price { font-size:.85rem; font-weight:700; }
+        .service-link { color:var(--rose-dark); font-size:.77rem; font-weight:700; }
+        .gallery { background:var(--cream); }
+        .gallery-grid { display:grid; grid-template-columns:1.35fr .8fr .8fr; grid-template-rows:255px 255px; gap:14px; }
+        .gallery-item { position:relative; overflow:hidden; cursor:pointer; background:#d8cbc2; }
+        .gallery-item:first-child { grid-row:1 / 3; }
+        .gallery-item img { width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+        .gallery-item:hover img { transform:scale(1.05); }
+        .gallery-label { position:absolute; right:14px; bottom:14px; left:14px; padding:10px 12px; background:rgba(255,253,251,.9); font-size:.75rem; }
+        .story-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:95px; align-items:center; }
+        .story-image { width:100%; height:520px; object-fit:cover; }
+        .story-copy h2 { margin:15px 0 22px; font:500 clamp(2.5rem,4vw,4rem)/1.08 'Playfair Display',serif; letter-spacing:-.05em; }
+        .story-copy p { max-width:500px; color:var(--muted); line-height:1.8; }
+        .signature { margin-top:30px; color:var(--rose-dark); font:italic 1.55rem 'Playfair Display',serif; }
+        .booking { background:var(--ink); color:var(--white); }
+        .booking-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:90px; align-items:center; }
+        .booking h2 { margin:14px 0 18px; font:500 clamp(2.5rem,4vw,4rem)/1.05 'Playfair Display',serif; letter-spacing:-.05em; }
+        .booking-copy { color:rgba(255,253,251,.65); line-height:1.75; }
+        .booking .eyebrow { color:#e7aaa3; }
+        .form { display:grid; grid-template-columns:1fr 1fr; gap:13px; padding:30px; background:var(--white); color:var(--ink); }
+        .form input,.form textarea { width:100%; padding:15px 0; border:0; border-bottom:1px solid var(--line); outline:none; color:var(--ink); background:transparent; }
+        .form textarea { grid-column:1 / -1; min-height:75px; resize:vertical; }
+        .form input:focus,.form textarea:focus { border-color:var(--rose-dark); }
+        .form .button { grid-column:1 / -1; margin-top:12px; }
+        .footer { padding:45px 0 25px; background:#211e1c; color:var(--white); }
+        .footer-row { display:flex; justify-content:space-between; align-items:center; gap:20px; padding-bottom:28px; border-bottom:1px solid rgba(255,255,255,.15); }
+        .footer .brand { color:var(--white); }
+        .footer small { color:rgba(255,255,255,.55); }
+        .socials { display:flex; gap:18px; color:rgba(255,255,255,.7); }
+        .footer-bottom { display:flex; justify-content:space-between; padding-top:22px; color:rgba(255,255,255,.45); font-size:.72rem; }
+        @media (max-width:800px) {
+            .wrap { width:min(100% - 36px,600px); }
+            .menu-toggle { display:block; }
+            .nav-links { position:fixed; inset:82px 0 0; display:flex; flex-direction:column; justify-content:center; gap:26px; background:var(--paper); transform:translateX(100%); transition:transform .3s ease; font-size:1rem; }
+            .nav-links.open { transform:translateX(0); }
+            .hero { min-height:auto; padding:135px 0 75px; }
+            .hero-grid,.story-grid,.booking-grid { grid-template-columns:1fr; gap:50px; }
+            .hero-visual { min-height:430px; }
+            .hero-image { height:430px; margin:0 auto; }
+            .hero-note { left:2%; bottom:15px; }
+            .section { padding:85px 0; }
+            .section-heading { display:block; }
+            .section-heading p { margin-top:22px; }
+            .service-grid { grid-template-columns:1fr; }
+            .service,.service:not(:nth-child(3n+1)) { padding:25px 0; border-left:0; border-bottom:1px solid var(--line); }
+            .service:nth-child(-n+3) { border-bottom:1px solid var(--line); }
+            .service:last-child { border-bottom:0; }
+            .gallery-grid { grid-template-columns:1fr 1fr; grid-template-rows:240px 190px 190px; }
+            .gallery-item:first-child { grid-column:1 / -1; grid-row:auto; }
+            .story-image { height:390px; }
+            .booking-grid { gap:30px; }
+            .footer-row,.footer-bottom { align-items:flex-start; flex-direction:column; }
+        }
+        @media (max-width:480px) {
+            h1 { font-size:3.45rem; }
+            .hero-actions,.hero-actions .button { width:100%; }
+            .trust-grid { grid-template-columns:1fr; gap:16px; }
+            .gallery-grid { grid-template-rows:230px 170px 170px; gap:9px; }
+            .form { grid-template-columns:1fr; padding:22px; }
+            .form textarea,.form .button { grid-column:auto; }
         }
     </style>
 </head>
 <body>
-
-    <!-- ========== HEADER ========== -->
-    <header class="header" id="header">
-        <div class="container">
-            <a href="#" class="logo">Elli<span>Nails</span></a>
-            <div class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <nav class="nav-menu" id="navMenu">
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#galeria">Galería</a></li>
-                    <li><a href="#testimonios">Testimonios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="https://wa.me/573115690597?text=Hola%20ElliNails!%20Quiero%20agendar%20una%20cita" class="btn-whatsapp-nav" target="_blank"><i class="fab fa-whatsapp"></i> Agendar</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- ========== HERO ========== -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <p class="hero-subtitle">✨ REALZA LA BELLEZA DE TUS UÑAS ✨</p>
-            <h1 data-aos="fade-up">Realza tu belleza con<br><span style="color: var(--color-gold);">uñas perfectas</span></h1>
-            <p data-aos="fade-up" data-aos-delay="100">Especialistas en uñas acrílicas, semipermanente y diseños personalizados. Tu estilo, nuestro arte.</p>
-            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
-                <a href="#servicios" class="btn btn-primary">Ver Servicios</a>
-                <a href="https://wa.me/573115690597?text=Hola%20ElliNails!%20Quiero%20agendar%20una%20cita" class="btn btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Agendar cita
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== SERVICIOS ========== -->
-    <section id="servicios" class="section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Nuestros <span>Servicios</span></h2>
-                <p>Ofrecemos los mejores tratamientos para tus manos y pies</p>
-            </div>
-            <div class="services-grid">
-                <!-- Servicio 1 -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="fas fa-hand-peace"></i>
-                    </div>
-                    <div class="service-info">
-                        <h3>Uñas Acrílicas</h3>
-                        <p>Durabilidad y elegancia. Diseños personalizados que duran semanas.</p>
-                        <div class="service-price">Desde $70.000</div>
-                        <a href="https://wa.me/573115690597?text=Hola!%20Quiero%20información%20sobre%20UÑAS%20ACRÍLICAS" class="btn-service" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Cotizar
-                        </a>
-                    </div>
-                </div>
-                <!-- Servicio 2 -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-fill-drip"></i>
-                    </div>
-                    <div class="service-info">
-                        <h3>Esmaltado Semipermanente</h3>
-                        <p>Brillo perfecto por hasta 3 semanas. Más de 100 colores disponibles.</p>
-                        <div class="service-price">Desde $60.000</div>
-                        <a href="https://wa.me/573115690597?text=Hola!%20Quiero%20información%20sobre%20SEMIPERMANENTE" class="btn-service" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Cotizar
-                        </a>
-                    </div>
-                </div>
-                <!-- Servicio 3 -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-paintbrush"></i>
-                    </div>
-                    <div class="service-info">
-                        <h3>Diseños Personalizados</h3>
-                        <p>Arte en tus uñas. Crea tu propio estilo con nuestros expertos.</p>
-                        <div class="service-price">Desde $75.000</div>
-                        <a href="https://wa.me/573115690597?text=Hola!%20Quiero%20información%20sobre%20DISEÑOS%20PERSONALIZADOS" class="btn-service" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Cotizar
-                        </a>
-                    </div>
-                </div>
-                <!-- Servicio 4 -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-icon">
-                        <i class="fas fa-spa"></i>
-                    </div>
-                    <div class="service-info">
-                        <h3>Manicura y Pedicura</h3>
-                        <p>Cuidado completo para tus manos y pies con tratamientos premium.</p>
-                        <div class="service-price">Desde $60.000</div>
-                        <a href="https://wa.me/573115690597?text=Hola!%20Quiero%20información%20sobre%20MANICURA%20Y%20PEDICURA" class="btn-service" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Cotizar
-                        </a>
-                    </div>
-                </div>
-                <!-- Servicio 5 -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="service-icon">
-                        <i class="fas fa-crown"></i>
-                    </div>
-                    <div class="service-info">
-                        <h3>Uñas de Gel</h3>
-                        <p>Mayor durabilidad y resistencia. Perfectas para ocasiones especiales.</p>
-                        <div class="service-price">Desde $70.000</div>
-                        <a href="https://wa.me/573115690597?text=Hola!%20Quiero%20información%20sobre%20UÑAS%20DE%20GEL" class="btn-service" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Cotizar
-                        </a>
-                    </div>
-                </div>
-                <!-- Servicio 6 -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="service-icon">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <div class="service-info">
-                        <h3>Decoraciones Premium</h3>
-                        <p>Incrustaciones, pedrería, cromados y efectos especiales.</p>
-                        <div class="service-price">Desde $80.000</div>
-                        <a href="https://wa.me/573115690597?text=Hola!%20Quiero%20información%20sobre%20DECORACIONES%20PREMIUM" class="btn-service" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Cotizar
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== GALERÍA ========== -->
-    <section id="galeria" class="section" style="background: var(--color-accent-light);">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Nuestro <span>Trabajo</span></h2>
-                <p>Mira algunos de nuestros diseños favoritos</p>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://nailscoruna.com/nail-art-la-tendencia-del-momento-en-el-diseno-de-unas/">
-                    <div class="gallery-overlay">
-                        <p>✨ Uñas Acrílicas</p>
-                    </div>
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.pexels.com/photos/3992062/pexels-photo-3992062.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Semipermanente">
-                    <div class="gallery-overlay">
-                        <p>💅 Semipermanente</p>
-                    </div>
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://images.pexels.com/photos/6172387/pexels-photo-6172387.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Diseños personalizados">
-                    <div class="gallery-overlay">
-                        <p>🎨 Diseños Personalizados</p>
-                    </div>
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
-                    <img src="https://images.pexels.com/photos/7880436/pexels-photo-7880436.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Uñas de gel">
-                    <div class="gallery-overlay">
-                        <p>💎 Uñas de Gel</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== TESTIMONIOS ========== -->
-    <section id="testimonios" class="section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Lo que dicen nuestras <span>clientas</span></h2>
-                <p>Más de 500 clientas satisfechas nos respaldan</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"Excelente servicio, mis uñas quedaron perfectas. El diseño personalizado que hicieron superó mis expectativas. Volveré sin duda."</p>
-                    <p class="testimonial-author">— Valentina Rodríguez</p>
-                </div>
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"La atención es increíble, muy profesionales. El esmaltado semipermanente me duró 4 semanas. 100% recomendado."</p>
-                    <p class="testimonial-author">— María José López</p>
-                </div>
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"El mejor estudio de uñas de la ciudad. Siempre salgo feliz con mis manos hermosas. Precios justos y calidad superior."</p>
-                    <p class="testimonial-author">— Camila Fernández</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CONTACTO ========== -->
-    <section id="contacto" class="section" style="background: var(--color-accent-light);">
-        <div class="container">
-            <div class="contact-grid" data-aos="fade-up">
-                <div class="contact-info">
-                    <h3>Contáctanos</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Cartagena, Colombia</p>
-                    <p><i class="fab fa-whatsapp"></i> +57 311 5690597</p>
-                    <p><i class="fas fa-envelope"></i> ellinails@gmail.com</p>
-                    <p><i class="far fa-clock"></i> Lun - Sáb: 9am - 7pm</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h3>Agenda tu cita</h3>
-                    <form class="contact-form">
-                        <input type="text" placeholder="Tu nombre">
-                        <input type="email" placeholder="Tu correo">
-                        <input type="tel" placeholder="WhatsApp">
-                        <textarea placeholder="¿Qué servicio te interesa?"></textarea>
-                        <button type="button" class="btn-submit" onclick="window.open('https://wa.me/573115690597?text=Hola%20ElliNails!%20Quiero%20agendar%20una%20cita')">Enviar por WhatsApp</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== FOOTER ========== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <h3>Elli<span>Nails</span></h3>
-                    <p>Estudio profesional de uñas dedicado a realzar tu belleza con los mejores diseños y tratamientos.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Enlaces rápidos</h4>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#galeria">Galería</a></li>
-                        <li><a href="#testimonios">Testimonios</a></li>
-                    </ul>
-                </div>
-                <div class="footer-hours">
-                    <h4>Horario de atención</h4>
-                    <p>Lunes a Viernes: 9am - 7pm</p>
-                    <p>Sábados: 9am - 6pm</p>
-                    <p>Domingos: Cerrado</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 ElliNails - Todos los derechos reservados | Diseñado con ❤️ para ti</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <header class="header" id="header"><nav class="nav wrap"><a class="brand" href="#inicio">Elli<span>Nails</span></a><button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false"><i class="fa-solid fa-bars"></i></button><div class="nav-links" id="navLinks"><a href="#servicios">Servicios</a><a href="#galeria">Inspiración</a><a href="#estudio">El estudio</a><a class="nav-cta" href="#reserva">Reservar cita <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></nav></header>
+    <main>
+        <section class="hero" id="inicio"><div class="hero-grid wrap"><div><div class="eyebrow">Beauty studio · Cartagena</div><h1>Tu estilo,<br><em>en tus manos.</em></h1><p class="hero-copy">Manicure, diseño y cuidado con una mirada contemporánea. Creamos uñas que se sienten tan especiales como tú.</p><div class="hero-actions"><a class="button" href="#reserva">Agenda tu cita <i class="fa-solid fa-arrow-right"></i></a><a class="button button-light" href="#galeria">Ver inspiración</a></div></div><div class="hero-visual"><img class="hero-image" src="https://images.pexels.com/photos/3997381/pexels-photo-3997381.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Manicure elegante en tonos rosados"><div class="hero-note"><strong>500+</strong><span>clientas felices y contando</span></div></div></div></section>
+        <section class="trust" aria-label="ElliNails en cifras"><div class="trust-grid wrap"><div class="trust-item"><strong>Atención personalizada</strong>Tu cita, tu momento</div><div class="trust-item"><strong>Diseños únicos</strong>Inspirados en ti</div><div class="trust-item"><strong>Cartagena, Colombia</strong>Te esperamos</div></div></section>
+        <section class="section services" id="servicios"><div class="wrap"><div class="section-heading"><div><div class="eyebrow">Lo que hacemos</div><h2>Un ritual de belleza,<br><em class="serif">hecho para ti.</em></h2></div><p>Desde un cuidado esencial hasta ese diseño que llevas imaginando. Elige tu próximo look.</p></div><div class="service-grid">
+            <article class="service"><span class="service-number">01</span><h3>Uñas acrílicas</h3><p>Durabilidad y elegancia con la forma y el largo que mejor van contigo.</p><div class="service-footer"><span class="price">Desde $70.000</span><a class="service-link" href="https://wa.me/573115690597?text=Hola%20ElliNails!%20Quiero%20cotizar%20u%C3%B1as%20acr%C3%ADlicas" target="_blank">Cotizar <i class="fa-solid fa-arrow-right"></i></a></div></article>
+            <article class="service"><span class="service-number">02</span><h3>Semipermanente</h3><p>Color impecable y brillo perfecto hasta por tres semanas.</p><div class="service-footer"><span class="price">Desde $60.000</span><a class="service-link" href="https://wa.me/573115690597?text=Hola%20ElliNails!%20Quiero%20cotizar%20semipermanente" target="_blank">Cotizar <i class="fa-solid fa-arrow-right"></i></a></div></article>
+            <article class="service"><span class="service-number">03</span><h3>Diseños personalizados</h3><p>Arte en tus uñas, desde un detalle sutil hasta una pieza protagonista.</p><div class="service-footer"><span class="price">Desde $75.000</span><a class="service-link" href="https://wa.me/573115690597?text=Hola%20ElliNails!%20Quiero%20cotizar%20un%20dise%C3%B1o%20personalizado" target="_blank">Cotizar <i class="fa-solid fa-arrow-right"></i></a></div></article>
+            <article class="service"><span class="service-number">04</span><h3>Manicure &amp; pedicure</h3><p>Un cuidado completo para devolverle a tus manos y pies su mejor versión.</p><div class="service-footer"><span class="price">Desde $60.000</span><a class="service-link" href="https://wa.me/573115690597?text=Hola%20ElliNails!%20Quiero%20cotizar%20manicure%20y%20pedicure" target="_blank">Cotizar <i class="fa-solid fa-arrow-right"></i></a></div></article>
+            <article class="service"><span class="service-number">05</span><h3>Uñas de gel</h3><p>Resistencia, ligereza y un acabado impecable para tus ocasiones especiales.</p><div class="service-footer"><span class="price">Desde $70.000</span><a class="service-link" href="https://wa.me/573115690597?text=Hola%20ElliNails!%20Quiero%20cotizar%20u%C3%B1as%20de%20gel" target="_blank">Cotizar <i class="fa-solid fa-arrow-right"></i></a></div></article>
+            <article class="service"><span class="service-number">06</span><h3>Decoración premium</h3><p>Pedrería, cromados y efectos especiales para llevar tu diseño más lejos.</p><div class="service-footer"><span class="price">Desde $80.000</span><a class="service-link" href="https://wa.me/573115690597?text=Hola%20ElliNails!%20Quiero%20cotizar%20decoraci%C3%B3n%20premium" target="_blank">Cotizar <i class="fa-solid fa-arrow-right"></i></a></div></article>
+        </div></div></section>
+        <section class="section gallery" id="galeria"><div class="wrap"><div class="section-heading"><div><div class="eyebrow">ElliNails moodboard</div><h2>Una idea para<br><em class="serif">tu próximo look.</em></h2></div><p>Guarda tu favorito y tráelo a tu cita. También podemos crear algo completamente nuevo.</p></div><div class="gallery-grid">
+            <div class="gallery-item"><img src="https://images.pexels.com/photos/3997381/pexels-photo-3997381.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Diseño de uñas rosado"><span class="gallery-label">Soft pink · Manicure</span></div><div class="gallery-item"><img src="https://images.pexels.com/photos/3997392/pexels-photo-3997392.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Diseño de uñas elegante"><span class="gallery-label">Classic · Gel</span></div><div class="gallery-item"><img src="https://images.pexels.com/photos/704815/pexels-photo-704815.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Esmalte de uñas rojo"><span class="gallery-label">Bold · Color</span></div><div class="gallery-item"><img src="https://images.pexels.com/photos/939835/pexels-photo-939835.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Manicure en tonos naturales"><span class="gallery-label">Natural · Care</span></div><div class="gallery-item"><img src="https://images.pexels.com/photos/3997391/pexels-photo-3997391.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Detalle de manicure"><span class="gallery-label">Details · Art</span></div>
+        </div></div></section>
+        <section class="section" id="estudio"><div class="story-grid wrap"><img class="story-image" src="https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Detalle de cuidado profesional de uñas"><div class="story-copy"><div class="eyebrow">Más que uñas</div><h2>Tu pausa favorita<br><em class="serif">de la semana.</em></h2><p>En ElliNails creemos que arreglarte las uñas es también regalarte tiempo. Trabajamos con calma, atención al detalle y una conversación que se siente como en casa.</p><p>Estamos en Cartagena para crear tu próximo look y hacerte salir sintiéndote increíble.</p><div class="signature">Con cariño, ElliNails</div></div></div></section>
+        <section class="section booking" id="reserva"><div class="booking-grid wrap"><div><div class="eyebrow">Tu próximo look empieza aquí</div><h2>Hagamos algo<br><em>bonito.</em></h2><p class="booking-copy">Cuéntanos qué tienes en mente y te contactaremos por WhatsApp para confirmar disponibilidad, duración y precio.</p></div><form class="form" id="bookingForm"><input id="name" type="text" placeholder="Tu nombre" aria-label="Tu nombre" required><input id="phone" type="tel" placeholder="Tu WhatsApp" aria-label="Tu WhatsApp" required><input id="service" type="text" placeholder="Servicio de interés" aria-label="Servicio de interés" required><input id="date" type="text" placeholder="Fecha ideal" aria-label="Fecha ideal"><textarea id="message" placeholder="Cuéntanos cómo te gustaría tu diseño" aria-label="Mensaje"></textarea><button class="button" type="submit">Enviar solicitud <i class="fa-brands fa-whatsapp"></i></button></form></div></section>
+    </main>
+    <footer class="footer"><div class="wrap"><div class="footer-row"><div><div class="brand">Elli<span>Nails</span></div><small>Beauty studio · Cartagena, Colombia</small></div><div class="socials"><a href="https://instagram.com/" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a><a href="https://wa.me/573115690597" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a><a href="mailto:ellinails@gmail.com" aria-label="Correo"><i class="fa-regular fa-envelope"></i></a></div></div><div class="footer-bottom"><span>© 2026 ElliNails</span><span>Lun - Sáb · 9:00 am - 7:00 pm</span></div></div></footer>
     <script>
-        // Inicializar AOS
-        AOS.init({
-            duration: 800,
-            once: true
-        });
-
-        // Header scroll
         const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Menú móvil
         const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        // Cerrar menú al hacer clic en un enlace
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Scroll suave
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
+        const navLinks = document.getElementById('navLinks');
+        window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 20));
+        menuToggle.addEventListener('click', () => { const isOpen = navLinks.classList.toggle('open'); document.body.classList.toggle('menu-open', isOpen); menuToggle.setAttribute('aria-expanded', isOpen); menuToggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>'; });
+        navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { navLinks.classList.remove('open'); document.body.classList.remove('menu-open'); menuToggle.setAttribute('aria-expanded', 'false'); menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>'; }));
+        document.getElementById('bookingForm').addEventListener('submit', event => { event.preventDefault(); const values = ['name','phone','service','date','message'].map(id => document.getElementById(id).value.trim()); const text = `Hola ElliNails! Soy ${values[0]}. Mi WhatsApp es ${values[1]}.%0A%0AQuiero agendar: ${values[2]}.%0AFecha ideal: ${values[3] || 'Por confirmar'}.%0A${values[4] || ''}`; window.open(`https://wa.me/573115690597?text=${text}`, '_blank'); });
     </script>
 </body>
 </html>
